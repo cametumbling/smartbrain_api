@@ -67,7 +67,7 @@ app.post('/register', (req,res)=> {
             name: name,
             joined: new Date()
           })
-          .the(user => {
+          .then(user => {
             res.json(user[0]);
           })
       })
