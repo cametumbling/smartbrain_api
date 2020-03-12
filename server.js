@@ -18,11 +18,6 @@ const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
-db.select('*').from('users').then(data => {
-  console.log(data);
-});
-
-
 const app = express();
 
 app.use(express.json());
