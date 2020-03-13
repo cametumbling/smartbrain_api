@@ -1,6 +1,6 @@
 const handleProfileGet = (req, res, db) => {
   const { id } = req.params;
-  db.select('*').from('users').where({id: id})
+  db.select('*').from('users').where({ id })
     .then(user => {
       if(user.length) {
         res.json(user[0])
@@ -12,5 +12,5 @@ const handleProfileGet = (req, res, db) => {
 }
 
 module.exports = {
-  handleProfileGet: handleProfileGet
+  handleProfileGet
 };
