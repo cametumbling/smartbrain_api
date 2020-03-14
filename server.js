@@ -15,11 +15,10 @@ const db = knex({
   }
 });
 
-
-const app = express();
 const saltRounds = 10;
 
-
+const app = express();
+app.use(express.urlencoded());
 app.use(express.json());
 app.use(cors());
 
